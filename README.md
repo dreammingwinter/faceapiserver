@@ -6,7 +6,7 @@ This app creates server which can handle requests for searching people by photo 
 # MongoDB
 To start you should install mongodb service on your PC and pull this repository.
 
-After that just create database "faceRecognition" with collection "faces" and you are done with configurating DB.
+After that just create database "faceRecognition" with collection "faces" and you are done with configuring DB.
 
 You can add some pre-made landmarks from faces.json file.
 
