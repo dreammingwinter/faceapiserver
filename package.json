@@ -1,0 +1,19 @@
+{
+  "name": "faceapiserver",
+  "version": "1.0.0",
+  "description": "Dyploma work of Vasyl Ilba",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Vasyl Ilba",
+  "license": "MIT",
+  "dependencies": {
+    "@tensorflow/tfjs": "^2.8.3",
+    "@tensorflow/tfjs-node": "^2.8.3",
+    "@vladmandic/face-api": "^0.11.2",
+    "canvas": "^2.6.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3"
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma</title>
+    <link id="theme" rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/table.css">
+
+    <script defer src="./script.js"></script>
+    <script defer src="./swipe.js"></script>
+    <script defer src="./select.js"></script>
+</head>
+<body>
+    <div id="loader" class="loaderHidden">
+        <div class="loaderWrap">
+            <img class="loaderImg" src="./img/face-upload.png">
+            <span class="loaderScanLine"></span>
+        </div>
+    </div>
+    <div id="navigationPanel">
+        <div class="navLogoWrapper">
+            <a href="/">
+                <div>
+                    <img class="navLogo" src="./favicon.ico">
+                    <span class="navLogoName">FindFriend</span>
+                </div>
+            </a>
+        </div>
+        <div class="navLinks">
+            <ul class="navLinkList">
+                <li class="navLinkItem">
+                    <a class="navLinkItemA" href="/reg">Зареєструвати</a>
+                </li>
+                <li class="navLinkItem">
+                    <a class="navLinkItemA" href="/about">Про проект</a>
+                </li>
+                <li class="navLinkItem">
+                    <a class="navLinkItemA" href="/support">Підтримати проект</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navSocials">
+            <ul class="navSocialList">
+                <li class="navSocialItem">
+                    <a target="_blank" href="https://t.me/SandWitch">
+                        <img class="navSocialItemImg" src="./img/socials/telegram.png">
+                    </a>
+                </li>
+                <li class="navSocialItem">
+                    <a target="_blank" href="https://www.instagram.com/dreammingwinter">
+                        <img class="navSocialItemImg" src="./img/socials/instagram.png">
+                    </a>
+                </li>
+                <li class="navSocialItem">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100017110816785">
+                        <img class="navSocialItemImg" src="./img/socials/facebook.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="themes custom-select">
+            <select name="themes" id="themes">
+                <option value="">theme</option>
+                <option value="blue">синя</option>
+                <option value="green">зелена</option>
+                <option value="red">червона</option>
+                <option value="black">темна</option>
+                <option value="yellow">жовта</option>
+                <option value="coffee">кава</option>
+                <option value="honeysuckle">мед</option>
+                <option value="sea foam">світла</option>
+                <option value="brown">коричнева</option>
+                <option value="turquoise">бірюза</option>
+            </select>
+        </div>
+    </div>
+    <div id="swipeLeftSide"></div>
+    <p class="heading">Завантажте зображеня людини<br>і знайдіть основну інформацію про неї</p>
+    <div class="info">
+        <p class="infop"><span class="redstar">*</span>Зображення, завантажені на цю сторінку, не зберігаються на сервері</p>
+    </div>
+    <label id="imageFileLabel" for="imageFile">
+        <input type="file" name="file" id="imageFile" accept='image/png, image/jpeg, image/jfif, image/jpg'>
+        <img src="./img/face-upload.png" id="faceUpload">
+        Перетягніть фото сюди, або натисніть, щоб вибрати
+    </label>
+    <span id="imageHint"></span>
+    <div id="canvasWrapper">
+        <img src="" id="UploadedImage">
+        <img src="" id="canvas"></img>
+    </div>
+    <span id="responseHint"></span>
+    <div id="tableData"></div>
+    <button id="searchBtn">Пошук</button>
+</body>
+</html>

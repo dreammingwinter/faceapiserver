@@ -1,0 +1,28 @@
+#tableData {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 60%;
+    margin: 40px auto 0 auto;
+    display: none;
+}
+table {
+    background-color: var(--color);
+    color: var(--dark-color);
+    border: 2px solid var(--dark-color);
+    border-radius: 3px;
+    border-spacing: 0;
+    margin: 2px 2px;
+}
+td {
+    padding: 5px 8px;
+    border-bottom: 1px solid var(--dark-color);
+}
+table tr:nth-last-child(1) td {
+    border-bottom: none;
+}
+@media (max-width: 650px) {
+    #tableData {
+        max-width: 80%;
+    }
+}

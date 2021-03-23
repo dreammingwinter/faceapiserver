@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma</title>
+    <link id="theme" rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/reg.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="./css/nav.css">
+
+    <script defer src="./reg.js"></script>
+    <script defer src="./swipe.js"></script>
+    <script defer src="./select.js"></script>
+</head>
+<body>
+    <div id="success">
+        <div class="sblock">
+            <p class="smsg">Успішно зареєстровано!</p>
+            <a href="/" class="sbtn">На головну!</a>
+        </div>
+    </div>
+    <div id="loader" class="loaderHidden">
+        <div class="loaderWrap">
+            <img class="loaderImg" src="./img/face-upload.png">
+            <span class="loaderScanLine"></span>
+        </div>
+    </div>
+    <div id="navigationPanel">
+        <div class="navLogoWrapper">
+            <a href="/">
+                <div>
+                    <img class="navLogo" src="./favicon.ico">
+                    <span class="navLogoName">FindFriend</span>
+                </div>
+            </a>
+        </div>
+        <div class="navLinks">
+            <ul class="navLinkList">
+                <li class="navLinkItem">
+                    <a class="navLinkItemA" href="/">Знайти</a>
+                </li>
+                <li class="navLinkItem">
+                    <a class="navLinkItemA" href="/about">Про проект</a>
+                </li>
+                <li class="navLinkItem">
+                    <a class="navLinkItemA" href="/support">Підтримати проект</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navSocials">
+            <ul class="navSocialList">
+                <li class="navSocialItem">
+                    <a target="_blank" href="https://t.me/SandWitch">
+                        <img class="navSocialItemImg" src="./img/socials/telegram.png">
+                    </a>
+                </li>
+                <li class="navSocialItem">
+                    <a target="_blank" href="https://www.instagram.com/dreammingwinter">
+                        <img class="navSocialItemImg" src="./img/socials/instagram.png">
+                    </a>
+                </li>
+                <li class="navSocialItem">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100017110816785">
+                        <img class="navSocialItemImg" src="./img/socials/facebook.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="themes custom-select">
+            <select name="themes" id="themes">
+                <option value="">theme</option>
+                <option value="blue">синя</option>
+                <option value="green">зелена</option>
+                <option value="red">червона</option>
+                <option value="black">темна</option>
+                <option value="yellow">жовта</option>
+                <option value="coffee">кава</option>
+                <option value="honeysuckle">мед</option>
+                <option value="sea foam">світла</option>
+                <option value="brown">коричнева</option>
+                <option value="turquoise">бірюза</option>
+            </select>
+        </div>
+    </div>
+    <div id="swipeLeftSide"></div>
+    <p class="heading">Додайте в базу даних людей,<br>щоб інші могли їх знайти</p>
+    <label id="imageFileLabel" for="imageFile">
+        <input type="file" name="file" id="imageFile" accept='image/png, image/jpeg, image/jfif, image/jpg' multiple>
+        <img src="./img/face-upload.png" id="faceUpload">
+        Перетягніть фото сюди, або натисніть, щоб вибрати
+    </label>
+    <div id="files"></div>
+    <span id="imageHint"></span>
+    <div id="fields">
+        <label for="_id">
+            <div>                
+                <p>Ідентифікаційний номер</p>
+                <input id="_id" type="number">
+                <span id="_idHint" class="hint"></span>
+            </div>
+        </label>
+        <label for="pib">
+            <div>
+                <p>ПІБ</p>
+                <input id="pib" type="text">
+                <span id="pibHint" class="hint"></span>
+            </div>
+        </label>
+        <label for="phone">
+            <div>
+                <p>Номер телефону</p>
+                <div class="phone">
+                    <span>+380</span><input id="phone" type="number">
+                </div>
+                <span id="phoneHint" class="hint"></span>
+            </div>
+        </label>
+        <label for="bdate">
+            <div>
+                <p>Дата народження</p>
+                <input id="bdate" type="date">
+                <span id="bdateHint" class="hint"></span>
+            </div>
+        </label>
+        <label for="place">
+            <div>
+                <p>Місце проживання</p>
+                <input id="place" type="text">
+                <span id="placeHint" class="hint"></span>
+            </div>
+        </label>
+    </div>
+    <span id="responseHint"></span>
+    <button id="regBtn">Зареєструвати</button>
+</body>
+</html>

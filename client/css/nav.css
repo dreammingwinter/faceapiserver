@@ -1,0 +1,247 @@
+#swipeLeftSide {
+    position: fixed;
+    width: 50px;
+    height: 100%;
+    z-index: 500;
+    display: none;
+}
+#navigationPanel {
+    background-color: var(--color);
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    margin: 0;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    transition: none;
+}
+.navLogoWrapper {
+    flex-grow: 1;
+}
+.navLinks {
+    flex-grow: 8;
+}
+.navSocials {
+    flex-grow: 1;
+}
+.themes {
+    flex-grow: 1;
+}
+
+.navLogo {
+    height: 32px;
+    width: 32px;
+    padding-left: 10px;
+}
+.navLogoName {
+    display: none;
+}
+.navLinks {
+    text-align: center;
+}
+.navSocials {
+    right: 0;
+}
+.navLinkList, .navSocialList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navLinkItem, .navSocialItem {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.navLinkItem + .navLinkItem {
+    padding-left: 20px;
+}
+.navSocialItem + .navSocialItem {
+    padding-left: 10px;
+}
+.navLinkItemA {
+    color: var(--dark-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+}
+.navSocialItemImg {
+    height: 28px;
+}
+
+/* line under link */
+.navLinkItemA::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: var(--dark-color);
+    width: 0;
+    position: absolute;
+    transition: width .4s, left .4s;
+    left: 50%;
+}
+.navLinkItem:hover .navLinkItemA::after {
+    width: 100%;
+    left: 0;
+}
+
+/* CUSTOM SELECT */
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    max-width: 150px;
+    width: 150px;
+}
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+.select-selected {
+    background-color: var(--color);
+}
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-color: var(--dark-color) transparent transparent transparent;
+}
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent var(--dark-color) transparent;
+    top: 3px;
+}
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+    color: var(--dark-color);
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent var(--dark-color) transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.select-selected {
+    border: none;
+}
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: var(--color);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: max-height .4s;
+    max-height: 400px;
+    overflow: hidden;
+}
+/* Hide the items when the select box is closed: */
+.select-hide {
+    max-height: 0;
+}
+.select-items div:hover, .same-as-selected {
+    background-color: var(--dark-color);
+    color: var(--color) !important;
+}
+/* END SELECT */
+
+@media (max-width: 780px) {
+    #navigationPanel {
+        display: block;
+        max-height: none;
+        height: 100vh;
+        background-color: rgba(0,0,0,.75);
+        opacity: 1;
+        overflow: hidden;
+        width: 0px;
+        transition: width .4s ease-out;
+    }
+    #navigationPanel::before {
+        display: block;
+        content: '';
+        width: 300px;
+        height: 100%;
+        background-color: var(--color);
+        position: absolute;
+        z-index: -1;
+    }
+    .navSocialList {
+        margin-top: 20px;
+        padding-left: 20px;
+        width: 300px;
+    }
+    .navLinks {
+        text-align: left;
+    }
+    .navLinkList {
+        margin-top: 20px;
+        width: 300px;
+    }
+    .navLinkItem {
+        display: block;
+        margin-top: 5px;
+    }
+    .navLinkItem {
+        margin-left: 20px;
+    }
+    .navLinkItem + .navLinkItem {
+        margin-left: 0;
+    }
+    .navLogo {
+        padding-left: 20px;
+    }
+    .navLogoName {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    .navLogoWrapper {
+        padding-top: 50px;
+        width: 300px;
+    }
+    .navLogoWrapper a {
+        text-decoration: none;
+        color: var(--dark-color);
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 20px;        
+    }
+    .navLogoWrapper a div {
+        display: flex;
+        align-items: center;
+    }
+    #swipeLeftSide {
+        display: block;
+    }
+    .themes {
+        width: 200px;
+    }
+    .custom-select {
+        position: relative;
+        max-width: 300px;
+        width: 300px;
+        margin-top: 20px;
+    }
+    .select-selected {
+        border-bottom: 1px solid var(--dark-color);
+        border-top: 1px solid var(--dark-color);
+    }
+    /* Style the arrow inside the select element: */
+    .select-selected:after {
+        top: 16px;
+    }
+    /* Point the arrow upwards when the select box is open (active): */
+    .select-selected.select-arrow-active:after {
+        top: 5px;
+    }
+    .no-trs {
+        transition: none !important;
+    }
+}

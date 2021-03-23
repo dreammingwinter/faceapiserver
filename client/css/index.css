@@ -1,0 +1,127 @@
+body {
+    font-family: var(--font);
+    background-color: var(--light-color);
+    margin: 0;
+}
+.heading {
+    text-align: center;
+    font-size: 20px;
+    color: var(--dark-color);
+    font-weight: 500;
+    margin-top: 60px;
+}
+.infop {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+.redstar {
+    font-size: 20px;
+    color: var(--dark-red);
+}
+#faceUpload {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+#imageFileLabel {
+    display: block;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 40px;
+    color: var(--dark-color);
+    background-color: var(--color);
+    box-shadow: 0 0 0 2px var(--dark-color);
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color .4s;
+}
+#imageFile {
+    display: none;
+}
+#searchBtn {
+    display: block;
+    padding: 10px 40px;
+    text-align: center;
+    margin: 40px auto;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    border: 2px solid var(--dark-color);
+    box-shadow: -2px 2px 0px var(--dark-color);
+    transition: background-color .4s;
+    border-radius: 3px;
+    font-size: 20px;
+    background: url("../img/block.png");
+    background-size: 12px;
+}
+#searchBtn:hover {
+    background-color: var(--color);             
+}
+#searchBtn:focus {
+    outline: none;
+}
+#searchBtn:active {
+    box-shadow: 0px 0px 0px var(--dark-color);
+    transform: translate(-2px, 2px);
+}
+#imageHint, #responseHint {
+    color: var(--dark-red);
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    width: 40%;
+    background-color: var(--red);
+    border-radius: 3px;
+    border: 2px solid var(--dark-red);
+    margin-top: 20px;
+    padding: 10px 40px;
+    display: none;
+}
+#canvasWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    display: none;
+}
+#UploadedImage {
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+#UploadedImage, #canvas {
+    max-width: 600px;
+    max-height: 600px;
+    display: block;
+    border-radius: 3px;
+}
+#canvas {
+    position: absolute;
+}
+.dropable {
+    background-color: var(--light-color) !important;
+}
+.greenHint {
+    color: var(--dark-green) !important;
+    background-color: var(--green) !important;
+    border: 2px solid var(--dark-green) !important;
+}
+
+@media (max-width: 650px) {
+    #UploadedImage, #canvas {
+        max-width: 80%;
+    }
+    p {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+    .heading {
+        margin-top: 20px;
+    }
+}

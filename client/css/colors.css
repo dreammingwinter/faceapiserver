@@ -1,0 +1,14 @@
+:root {
+    --red: #eb5a66;
+    --dark-red: #7e0000;
+    --green: rgb(0, 255, 85);
+    --dark-green: rgb(0, 83, 0);
+    --font: Segoe UI;
+}
+*::selection {
+    color: var(--dark-red);
+    background-color: var(--red);
+}
+* {
+    transition: color .2s background-color .2s;
+}

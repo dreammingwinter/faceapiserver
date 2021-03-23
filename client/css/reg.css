@@ -1,0 +1,308 @@
+body {
+    font-family: var(--font);
+    background-color: var(--light-color);
+    margin: 0;
+}
+.heading {
+    text-align: center;
+    font-size: 20px;
+    color: var(--dark-color);
+    font-weight: 500;
+    margin-top: 60px;
+}
+#faceUpload {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+#imageFileLabel {
+    display: block;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 40px;
+    color: var(--dark-color);
+    background-color: var(--color);
+    box-shadow: 0 0 0 2px var(--dark-color);
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color .4s;
+    border: none;
+}
+#imageFile {
+    display: none;
+}
+#regBtn {
+    display: block;
+    padding: 10px 40px;
+    text-align: center;
+    margin: 40px auto;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    border: 2px solid var(--dark-color);
+    box-shadow: -2px 2px 0px var(--dark-color);
+    transition: background-color .4s;
+    border-radius: 3px;
+    font-size: 20px;
+    background: url("../img/block.png");
+    background-size: 12px;
+    cursor: pointer;
+}
+#regBtn:hover {
+    background-color: var(--color);             
+}
+#regBtn:focus {
+    outline: none;
+}
+#regBtn:active {
+    box-shadow: 0px 0px 0px var(--dark-color);
+    transform: translate(-2px, 2px);
+}
+#imageHint, #responseHint {
+    color: var(--dark-red);
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    width: 40%;
+    background-color: var(--red);
+    border-radius: 3px;
+    border: 2px solid var(--dark-red);
+    margin-top: 20px;
+    padding: 10px 40px;
+    display: none;
+}
+.dropable {
+    background-color: var(--light-color) !important;
+}
+.greenHint {
+    color: var(--dark-green) !important;
+    background-color: var(--green) !important;
+    border: 2px solid var(--dark-green) !important;
+}
+
+#fields {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto 0 auto;
+}
+/* hide arrows on input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+label {
+    display: block;
+    width: 80%;
+    border-radius: 3px;
+    border: 2px solid var(--dark-color);
+    background-color: var(--color);
+    color: var(--dark-color);
+    margin: 5px auto;
+    padding: 0 5px;
+}
+label div {
+    width: 90%;
+    margin: 0 auto;
+}
+label div p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 3px;
+    border: 2px solid var(--dark-color);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-size: 18px;
+    padding: 5px;
+    margin: 5px 0;
+    transition: box-shadow .2s;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--dark-color);
+}
+.phone {
+    margin: 0;
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+}
+.phone input {
+    display: inline-block;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 0;
+}
+.phone span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(--color);
+    border: 2px solid var(--dark-color);
+    border-right: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 5px;
+    margin: 0;
+}
+.hint {
+    width: 100%;
+    margin: 2px 0;
+    border-radius: 3px;
+    color: var(--dark-red);
+    background-color: var(--red);
+    border: 2px solid var(--dark-red);
+    box-sizing: border-box;
+    padding-left: 10px;
+    display: none;
+    font-size: 14px;
+}
+#files {
+    background-color: var(--color);
+    border: 2px solid var(--dark-color);
+    color: var(--dark-color);
+    width: 40%;
+    margin: 20px auto 0 auto;
+    border-radius: 3px;
+    display: none;
+}
+.filesFile {
+    margin: 5px;
+    border-radius: 3px;
+    border: 2px solid var(--dark-color);
+    box-shadow: 0px 0px 10px 2px rgba(50,50,50,0.8);
+}
+.filesFile + .filesFile {
+    margin-top: 10px;
+}
+.fdata {
+    display: flex;
+    justify-content: space-between;
+}
+.fnumber {
+    width: 30px;
+    border-right: 2px solid var(--dark-color);
+    text-align: center;
+    overflow: hidden;
+}
+.fname {
+    padding-left: 10px;
+    overflow: hidden;
+    text-align: left;
+    width: 80%;
+    max-height: 21px;
+}
+.fx {
+    width: 30px;
+    border-left: 2px solid var(--dark-color);
+    background-color: var(--red);
+    color: var(--dark-red);
+    text-align: center;
+    cursor: pointer;
+}
+.fhint {
+    border-top: 2px solid var(--dark-color);
+    padding: 2px;
+    display: none;
+}
+.fhint span {
+    display: block;
+    border-radius: 3px;
+    color: var(--dark-red);
+    background-color: var(--red);
+    border: 2px solid var(--dark-red);
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+#success {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .75);
+    z-index: 2500;
+}
+.sblock {
+    background-color: var(--color);
+    padding: 40px;
+    border-radius: 3px;
+    border: 2px solid var(--dark-color);
+    display: flex;
+    flex-direction: column;
+}
+.smsg {
+    font-size: 24px;
+    color: var(--dark-color);
+    font-weight: 500;
+    text-align: center;
+}
+.sbtn {
+    padding: 10px 40px;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    border: 2px solid var(--dark-color);
+    box-shadow: -2px 2px 0px var(--dark-color);
+    transition: background-color .4s;
+    border-radius: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+.sbtn:hover {
+    background-color: var(--color);             
+}
+.sbtn:focus {
+    outline: none;
+}
+.sbtn:active {
+    box-shadow: 0px 0px 0px var(--dark-color);
+    transform: translate(-2px, 2px);
+}
+
+@media (max-width: 1000px) {
+    #fields {
+        width: 80%;
+    }
+    #files {
+        width: 80%;
+    }
+}
+
+@media (max-width: 650px) {
+    p {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+    .sblock {
+        max-width: 60%;
+    }
+    .heading {
+        margin-top: 20px;
+    }
+}
