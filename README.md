@@ -21,4 +21,4 @@ The main issue with this project was the node/canvas library on Windows. It requ
 To run this project just run .bat file (it runs and stops mongodb so you couldn`t do it manually all the time).
 
 # Thanks
-Thanks to @vladmandic for his update to face-api.js library, it helps me a lot.
+Thanks to @vladmandic for his update to face-api.js library, it helped me a lot.
