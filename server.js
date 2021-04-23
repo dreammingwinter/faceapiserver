@@ -235,6 +235,7 @@ function isSupportedType(base64Image) {
         for (type of config.supportedTypes) {
             if (base64Image.startsWith(`data:image/${type}`)) return true;
         }
+        return false;
     }
     return false;
 }
