@@ -2,7 +2,7 @@ require('@tensorflow/tfjs-node');
 const MongoClient = require("mongodb").MongoClient;
 
 const canvas = require('canvas');
-const faceapi = require('@vladmandic/face-api');
+const faceapi = require('@vladmandic/face-api/dist/face-api.node');
 const { Canvas, Image, ImageData } = canvas
 faceapi.env.monkeyPatch({ Canvas, Image, ImageData });
 
