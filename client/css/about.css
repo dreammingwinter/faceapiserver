@@ -34,3 +34,8 @@ body {
 .item li {
     margin: 5px 0;
 }
+@media screen and (max-width: 1200px) {
+    .fact-list {
+        margin: 0 30px;
+    }
+}
