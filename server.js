@@ -47,6 +47,14 @@ const server = app.listen(config.port, config.address, async () => {
     });
 });
 
+app.get('/about', (req, res) => {
+    res.sendFile(__dirname + '/client/about.html')
+})
+
+app.get('/support', (req, res) => {
+    res.sendFile(__dirname + '/client/support.html')
+})
+
 app.get('/reg', (req, res) => {
     res.sendFile(__dirname + '/client/register.html');
 });
@@ -104,7 +112,7 @@ app.post('/api', async (req, res) => {
                 });
             }
         } else { res.json({ faces: 0 }); }
-    } else { res.json({ faces: 0} ); }
+    } else { res.json({ faces: 0}); }
 });
 
 app.post('/add', async (req, res) => {
