@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link id="theme" rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/nav.css">
+
+    <script defer src="./swipe.js"></script>
+    <script defer src="./select.js"></script>
+</head>
+<body>
+    <div id="navigationPanel">
+        <div class="navLogoWrapper">
+            <a href="/">
+                <div>
+                    <img class="navLogo" src="./favicon.ico">
+                    <span class="navLogoName">FindFriend</span>
+                </div>
+            </a>
+        </div>
+        <div class="navLinks">
+            <ul class="navLinkList">
+                <li class="navLinkItem">
+                    <a class="navLinkItemA" href="/">Пошук</a>
+                </li>
+                <li class="navLinkItem">
+                    <a class="navLinkItemA" href="/reg">Зареєструвати</a>
+                </li>
+                <li class="navLinkItem">
+                    <a class="navLinkItemA" href="/support">Підтримати проект</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navSocials">
+            <ul class="navSocialList">
+                <li class="navSocialItem">
+                    <a target="_blank" href="https://t.me/SandWitch">
+                        <img class="navSocialItemImg" src="./img/socials/telegram.png">
+                    </a>
+                </li>
+                <li class="navSocialItem">
+                    <a target="_blank" href="https://www.instagram.com/dreammingwinter">
+                        <img class="navSocialItemImg" src="./img/socials/instagram.png">
+                    </a>
+                </li>
+                <li class="navSocialItem">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100017110816785">
+                        <img class="navSocialItemImg" src="./img/socials/facebook.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="themes custom-select">
+            <select name="themes" id="themes">
+                <option value="">theme</option>
+                <option value="blue">синя</option>
+                <option value="green">зелена</option>
+                <option value="red">червона</option>
+                <option value="black">темна</option>
+                <option value="yellow">жовта</option>
+                <option value="coffee">кава</option>
+                <option value="honeysuckle">мед</option>
+                <option value="sea foam">світла</option>
+                <option value="brown">коричнева</option>
+                <option value="turquoise">бірюза</option>
+            </select>
+        </div>
+    </div>
+    <div id="swipeLeftSide"></div>
+    <p class="heading">Про проект</p>
+    <div class="fact-list">
+        <div class="item">
+            <p>Цей проект є вільним, некомерційним рішенням для здійснення пошуку людей за фото їх облич</p>
+        </div>
+        <div class="item">
+            <p>Цей веб-додаток створено як проект дипломного проектування у <a href="https://tc.lviv.ua/">Технологічному Фаховому Коледжі НУ "ЛП"</a></p>
+        </div>
+        <div class="item">
+            <p>Мета створення цього проекту - допомогти людям знайти одне одного, маючи лише фотознімок</p>
+        </div>
+        <div class="item">
+            <p>"Під капотом" проекту працює бібліотека штучного інтелекту Tensorflow</p>
+        </div>
+        <div class="item">
+            <p>Цей проект існує на github-сторінці <a href="https://github.com/dreammingwinter/faceapiserver">faceapiserver</a>
+                , де кожен може запропонувати якісь доповнення до нього, або використати якісь його частини у своїх проектах</p>
+        </div>
+        <div class="item">
+            <p>Окрему подяку автори проекту хочуть висловити:</p>
+            <ul>
+                <li><a href="https://github.com/vladmandic/face-api">vladmandic</a></li>
+                <li><a href="https://github.com/tensorflow/tfjs">tensorflow</a></li>
+                <li><a href="https://justadudewhohacks.github.io/face-api.js/docs/index.html">justadudewhohacks</a></li>
+                <li><a href="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw">Web Dev Simplified</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
