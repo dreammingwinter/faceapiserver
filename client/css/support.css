@@ -37,3 +37,11 @@ body {
     cursor: pointer;
     text-decoration: underline;
 }
+@media screen and (max-width: 800px) {
+    .support-block, .heading {
+        margin: 0 30px;
+    }
+    .heading {
+        margin-top: 60px;
+    }
+}
