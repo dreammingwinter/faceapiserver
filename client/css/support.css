@@ -21,6 +21,9 @@ body {
     color: var(--dark-color);
     text-transform: uppercase;
     margin: 5px 0;
+    padding: 10px 40px;
+    background-color: var(--color);
+    border-radius: 8px;
 }
 .support-block p {
     color: var(--dark-color);
