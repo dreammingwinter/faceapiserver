@@ -1,0 +1,36 @@
+body {
+    font-family: var(--font);
+    background-color: var(--light-color);
+    margin: 0;
+}
+.heading {
+    text-align: center;
+    font-size: 20px;
+    color: var(--dark-color);
+    font-weight: 500;
+    margin-top: 60px;
+}
+.support-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.support-block-heading {
+    color: var(--dark-color);
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+.support-block p {
+    color: var(--dark-color);
+    text-align: center;
+    margin: 5px 0;
+}
+.support-block a {
+    color: var(--dark-color);
+}
+.click-to-copy {
+    cursor: pointer;
+    text-decoration: underline;
+}
