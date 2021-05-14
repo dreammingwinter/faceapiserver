@@ -245,3 +245,9 @@
         transition: none !important;
     }
 }
+
+@media (min-width: 781px) {
+    #navigationPanel {
+        width: 100% !important;
+    }
+}
