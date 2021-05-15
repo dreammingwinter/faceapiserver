@@ -1,11 +1,10 @@
 require('@tensorflow/tfjs-node');
-const MongoClient = require("mongodb").MongoClient;
-
 const canvas = require('canvas');
 const faceapi = require('@vladmandic/face-api/dist/face-api.node');
 const { Canvas, Image, ImageData } = canvas
 faceapi.env.monkeyPatch({ Canvas, Image, ImageData });
 
+const MongoClient = require("mongodb").MongoClient;
 const express = require('express');
 const app = express();
 app.use(express.static('client'));
@@ -124,7 +123,8 @@ app.post('/add', async (req, res) => {
     */
     const data = req.body;
     const validation = await validateAddData(data);
-    const validated = !Object.values(validation).some(e => e !== true && e === 'dberror');
+    const validated = !Object.values(validation).some(e => e !== true || e === 'dberror');
+    
     if (validated) {
         const detections = [];
 
@@ -152,7 +152,8 @@ app.post('/add', async (req, res) => {
             })
             .then(() => {
                 // update face matcher
-                const newPerson = new faceapi.LabeledFaceDescriptors(data.id, descriptors.map(descriptor => new Float32Array(descriptor)));
+                const newPerson = new faceapi.LabeledFaceDescriptors(data.id, 
+                    descriptors.map(descriptor => new Float32Array(descriptor)));
                 globalFaceMatcher.labeledDescriptors.push(newPerson);
                 res.json( {error: 0} );
             })
