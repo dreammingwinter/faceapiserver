@@ -147,10 +147,10 @@ function validateAll() {
     const valId =    validateId();
     const valPib =   validatePib();
     const valPhone = validatePhone();
-    const valDbate = validateBdate();
+    const valBdate = validateBdate();
     const valPlace = validatePlace();
     
-    if (valFiles && valId && valPib && valPhone && valDbate && valPlace) {
+    if (valFiles && valId && valPib && valPhone && valBdate && valPlace) {
         return true;
     } else {
         return false;
