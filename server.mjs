@@ -151,7 +151,7 @@ app.post('/add', async (req, res) => {
     const detections = [];
 
     // create faces[] containing amount of faces
-    for (img of data.images) {
+    for (const img of data.images) {
         const image = await createImage(img);
         const d = await getDetections(image);
         detections.push(d);
@@ -180,7 +180,7 @@ app.post('/add', async (req, res) => {
         // update face matcher
         const newPerson = new faceapi.LabeledFaceDescriptors(
             data.id, 
-            descriptors.map(Float32Array)
+            descriptors.map(e => new Float32Array(e))
         );
         globalFaceMatcher.labeledDescriptors.push(newPerson);
         res.json( {error: 0} );
@@ -232,7 +232,7 @@ async function validateAddData(data) {
 
     const obj = {
         imagelength: data.images.length == config.imagesLength,
-        allimages: !data.images.some(e => !isSupportedType(e)),
+        allsupportedimages: !data.images.some(e => !isSupportedType(e)),
         idlen: data.id.match(/^\d{10}$/),
         idunique,
         pib: data.pib.match(/^([A-ZА-ЯҐЄІЇ]{1}[a-zа-яґєії]+(\s|$)){2,3}$/u),

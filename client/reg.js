@@ -89,7 +89,7 @@ function validateId() {
 function validatePib() {
     const str = pib.value.trim();
     if (str.length != 0) {
-        const pattern = /^([A-ZА-ЯҐЄІЇ]{1}[a-zа-яґєії]+(\s|$)){3}$/u;
+        const pattern = /^([A-ZА-ЯҐЄІЇ]{1}[a-zа-яґєії]+(\s|$)){2,3}$/u;
         if (!str.match(pattern)) {
             showHint(pibHint, "Будь ласка, заповніть поле правильно (3 слова)");
             return false;

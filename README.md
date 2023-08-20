@@ -17,6 +17,7 @@ Also you can move DB to cloud by yourself.
 
 # Canvas
 The main issue with this project was the node/canvas library on Windows. It requires some extra programs to be installed.
+
 Link: https://www.npmjs.com/package/canvas
 
 Once you have everything for canvas installed
@@ -25,6 +26,7 @@ In you project directory run:
 `npm rebuild @tensorflow/tfjs-node build-addon-from-source`
 
 Common error: The specified module could not be found. node_modules\@tensorflow\tfjs-node\lib\napi-v6\tfjs_binding.node
+
 Fix: https://github.com/tensorflow/tfjs/issues/4116#issuecomment-719940801
 
 # Run
