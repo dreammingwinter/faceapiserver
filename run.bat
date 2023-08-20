@@ -1,6 +1,6 @@
 net start mongodb
 setlocal
 cd /d %~dp0
-node server.js
+npm run start
 net stop mongodb
 pause
